@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(https://unpkg.com/bootstrap@4.1.0/dist/css/bootstrap.min.css);
+
+
+body {
+    
+
+    background-image :linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5))
+  }
+
+body{
+    font-family: 'Kalam', cursive;
+}

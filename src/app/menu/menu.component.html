@@ -1,0 +1,17 @@
+
+<!-- HTML for nav bar. we show login when the user is not logged in using ngif .userloggedIn(), and logout if user if user is logged in .isUserLoggedIn() -->
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+
+        <ul class="navbar-nav">
+                <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/welcome/Hasham" class="nav-link">Home</a></li>
+            <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/items" class="nav-link">Items</a></li>
+        </ul>
+
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!basicAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="basicAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+</header>

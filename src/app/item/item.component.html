@@ -1,0 +1,48 @@
+<H1>Shopping-List</H1>
+
+<div class="container">
+
+  
+  <form (ngSubmit)="!itemForm.invalid && saveItem()" #itemForm="ngForm">
+    <fieldset class="form-group">
+      <label>Items</label>
+      <input type="text" #itemName="ngModel" 
+            [(ngModel)]="item.name" class="form-control" 
+                name="name" required="required" minlength="5">
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label>Quantity</label>
+        <input type="number" #quantity="ngModel"
+        [ngModel]="item.quantity"
+        (ngModelChange)="item.quantity = $event"
+        class="form-control" name="quantity" required="required" >
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Price of One</label>
+      <input type="number" #price="ngModel"
+      [ngModel]="item.price"
+      (ngModelChange)="item.price = $event"
+      class="form-control" name="price" required="required" >
+  </fieldset>
+
+  <fieldset class="form-group">
+      <label>Enter Category of Item</label>
+      <input type="text" #category="ngModel"
+      [ngModel]="item.category"
+      (ngModelChange)="item.category = $event"
+      class="form-control" name="category">
+  </fieldset>
+
+  <fieldset class="form-group">
+      <label>Any Discount You Have For Item</label>
+      <input type="number" #discount="ngModel"
+      [ngModel]="item.discount"
+      (ngModelChange)="item.discount = $event"
+      class="form-control" name="discount">
+  </fieldset>
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>  
+</div>
